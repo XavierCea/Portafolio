@@ -1,0 +1,43 @@
+﻿@model PersonDTO
+
+@{
+    int Age(DateTime birthday)
+    {
+        TimeSpan age = DateTime.Now - birthday;
+        var years = age.Days / 365;
+        return years;
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Soy @Model.Name @Model.Surname (@Age(Model.Birthday))</h1>
+    <h2>Soy un desarrollador Fullstack especializado en tecnologias .NET y Typescript.</h2>
+
+    <img id="profilephoto"
+         src="~/Resources/images/PhotoProfile.png" alt="Foto de Xavier" />
+</div>
+
+<div class="row justify-content-center text-center complete-about">
+    <div class="col col-md-7 about-section">
+        <h1>Acerca de mi</h1>
+        <p>
+            Soy un apasionado desarrollador de aplicaciones con experiencia en el desarrollo fullstack utilizando .NET Framework y Angular.
+            Me encanta crear soluciones innovadoras y eficientes que brinden una excelente experiencia de usuario.
+        </p>
+        <p>
+            Una de mis cualidades más destacadas es mi curiosidad insaciable. Siempre estoy buscando nuevas tecnologías y enfoques para mejorar mi trabajo y
+            mantenerme actualizado en un campo tan dinámico como el desarrollo de aplicaciones. Estoy dispuesto a enfrentar nuevos desafíos y aprender nuevas habilidades
+            para seguir creciendo profesionalmente.
+        </p>
+        <p>
+            Además de mis habilidades técnicas, también me considero un comunicador eficiente y un colaborador en equipo.
+            Disfruto trabajando en entornos colaborativos donde puedo compartir conocimientos y aprender de mis colegas.
+            Creo en la importancia de la comunicación clara y la cooperación para lograr resultados excepcionales.
+        </p>
+        <p>
+            En resumen, soy un desarrollador de aplicaciones fullstack con experiencia en .NET Framework y Angular.
+            Soy curioso, siempre dispuesto a aprender y adaptable a nuevos desafíos. Siempre busco la excelencia en mi trabajo y
+            me apasiona crear soluciones de alta calidad que superen las expectativas de los usuarios.
+        </p>
+    </div>
+</div>

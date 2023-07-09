@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Contacto";
+}
+
+<h1>Formulario de Contacto</h1>
+
+<form asp-asp-controller="Home" asp-action="Contact">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre" />
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu email de contacto" />
+    </div>
+    <div class="mb-3">
+        <label for="subject" class="form-label">Mensaje</label>
+        <input type="text" class="form-control" id="subject" name="subject" placeholder="Introduce tu email de contacto" />
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Teléfono</label>
+        <div class="input-group">
+            <partial name="_PhoneCode" />
+            <input type="tel" onkeypress="return onlyNumberKey(event)" class="form-control" id="phone" name="phone" style="width:80%; margin-left: 2rem" />
+        </div>
+        
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+<script>
+    function onlyNumberKey(evt) {
+
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+</script>
