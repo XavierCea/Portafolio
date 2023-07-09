@@ -1,0 +1,44 @@
+﻿#profilephoto {
+    width: 300px;
+    margin: 2rem 0;
+    border-radius: 50%;
+    border: 2px solid darkblue;
+}
+
+.about-section {
+    margin: 2rem 0 5rem 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about-section h1 {
+    margin-bottom: 2rem;
+}
+
+.about-section p {
+        text-align: justify;
+        font-family: sans-serif;
+        line-height: 1.5;
+        font-size: 1.25rem;
+        margin-left: 40px;
+        margin-right: 40px;
+}
+
+.complete-about {
+    background-image: url("../Resources/images/backgroundanimated.gif");
+}
+
+.cabecera {
+    font-weight: bold;
+    color: darkblue;
+}
+
+.habilities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.habilities i {
+    color: darkblue;
+    font-size: 50px
+}
