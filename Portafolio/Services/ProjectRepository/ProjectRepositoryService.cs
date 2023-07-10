@@ -24,9 +24,9 @@ namespace Portafolio.Services.ProjectRepository
                 },
                 new ProjectDTO()
                 {
-                    Title = "Protafolio",
+                    Title = "Portafolio",
                     Description = "Aplicación web para mostrar mi infroamción profesional.",
-                    Link = "https://github.com/XavierCea/VirtualAssistant",
+                    Link = "https://github.com/XavierCea/Portafolio",
                     ImageURL = "/Resources/images/PortafolioView.gif"
 
                 }
