@@ -29,6 +29,14 @@ namespace Portafolio.Services.ProjectRepository
                     Link = "https://github.com/XavierCea/Portafolio",
                     ImageURL = "/Resources/images/PortafolioView.gif"
 
+                },
+                new ProjectDTO()
+                {
+                    Title = "Mecánicas de movimiento",
+                    Description = "Ejemplo de mecánicas de movimiento en Unity3D con un modelo humano.",
+                    Link = "https://youtu.be/nNkrn19Nfpk",
+                    ImageURL = "/Resources/images/Unity3DExample.gif"
+
                 }
             };
         }
