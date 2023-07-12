@@ -1,36 +1,73 @@
 ﻿@{
     ViewData["Title"] = "Contacto";
 }
-
-<h1>Formulario de Contacto</h1>
-
-<form asp-asp-controller="Home" asp-action="Contact">
-    <div class="mb-3">
-        <label for="name" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre" />
-    </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu email de contacto" />
-    </div>
-    <div class="mb-3">
-        <label for="subject" class="form-label">Asunto</label>
-        <input type="text" class="form-control" id="subject" name="subject" placeholder="Introduce tu email de contacto" />
-    </div>
-    <div class="mb-3">
-        <label for="phone" class="form-label">Teléfono</label>
-        <div class="input-group">
-            <partial name="_PhoneCode" />
-            <input type="tel" onkeypress="return onlyNumberKey(event)" class="form-control" id="phone" name="phone" style="width:80%; margin-left: 2rem" />
+<div class="contactus container-fluid">
+    <div class="container formulary">
+        <div class="text">
+            Formulario de Contacto
         </div>
-        
+        <form asp-asp-controller="Home" asp-action="Contact">
+            <div class="form-row">
+                <div class="input-data">
+                    <input input type="text" class="form-control" id="name" name="name" required>
+                    <div class="underline"></div>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="input-data">
+                    <input class="form-control" type="text" required>
+                    <div class="underline"></div>
+                    <label for="">Apellido</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="underline"></div>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-data">
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                    <div class="underline"></div>
+                    <label for="">Asunto</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <partial name="_PhoneCode" />
+                    <div class="underline"></div>
+                </div>
+                <div class="input-data">
+                    <input type="tel" onkeypress="return onlyNumberKey(event)" class="form-control" id="phone" name="phone" required>
+                    <div class="underline"></div>
+                    <label for="">Teléfono</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea rows="8" cols="80" id="message" name="message" required></textarea>
+                    <br />
+                    <div class="underline"></div>
+                    <label for="">Write your message</label>
+                    <br />
+                    <div class="form-row submit-btn" style="text-align:right">
+                        <div class="input-data">
+                            <div class="inner"></div>
+                            <button type="submit" class="cssbuttons-io-button">
+                                Enviar
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                                </div>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="mb-3">
-        <label for="message" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
-</form>
+</div>
+
+
 
 <script>
     function onlyNumberKey(evt) {
